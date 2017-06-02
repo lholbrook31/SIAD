@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Logan's Webpage</title>
+</head>
+
+<body>
+<script> alert("hello from inline JavaScript");</script>
+<script src="myscript.js"></script>
+<h1>Logan Holbrook</h1>
+<img src="Photo.jpg" width="250" height="300" />
+<p>
+<a href="www.google.com">Just For Now</a>
+</p>
+<script>function startTime(){
+	document.getElementById('clock').innerHTML = new Date();
+	setTimeout(startTime, 500);
+}
+</script>
+<body onload="startTime()">
+<div id="clock"></div>
+
+<div id="email" onclick="showhide()">show my email</div>
+<script>
+	var shown = false;
+	function showhide(){
+	if(shown){
+		document.getElementById('email').innerHTML = "show my email";
+		shown = false;
+	}else{
+		var myemail = "<a hreaf='mailto:lholbrook31" + "@" + "gmail.com'>lholbrook31" + "@" + "gmail.com</a>";
+		//alert("myemail="+myemail);
+		document.getElementById('email').innerHTML= myemail;
+		shown = true;
+	}
+	}
+</script>
+</body>
+
+</html>
